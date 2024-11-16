@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <img class="logo" src="logonya2.png" alt="logo"> 
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+    
+            </div>
+            <a href="home.html">Home</a>
+            <a href="promotion.html">Promotion</a>
+            <a href="allcars.html">All Cars</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+
+        <div class="border">
+            <div class="navbar dropdown"><a class="register" href="">Register</a>
+                <div class="dropdown-menu">
+                    <div class="text-dropdown"><a href="signin.html">Sign In</a></div>
+                    <div class="text-dropdown"><a href="signup.html">Sign Up</a></div>
+                </div>
+            </div>
+            <div class="icon">
+                <img class="icon-arrow" src="Assets/ui/down_down_arrow.png" alt="">
+            </div>
+        </div>
+
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+    <script src="nav.js"></script>
+    
+    <div class="body1">
+        <section class="container1">
+            <header class="signup-title">Sign Up</header>
+            <div id="error"></div>
+            <form action="" class="form" name="regis" onsubmit="return validate()">
+                <div class="input1">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter Username">
+                </div>
+                <div class="input1">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                </div>
+                <div class="column">
+                    <div class="input1">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter Password">
+                    </div>
+                    <div class="input1">
+                        <label for="conf-pass">Confirm Password</label>
+                        <input type="password" name="conf-pass" id="conf-pass" placeholder="Re-enter Password">
+                    </div>
+                </div>
+                <div class="input1">
+                    <label for="dob">Birth Date</label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+
+                <div class="gender1">
+                    <h3>Gender</h3>
+                    <div class="gender-div">
+                        <div class="gender">
+                            <input type="radio" id="male" name="gender" checked>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-tnc">
+                    <input type="checkbox" name="agree" id="agree">
+                    <label for="agree">Agree to Terms & Conditions</label>
+                </div>
+
+                <button onclick="myBtn()" type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    
+   
+</body>
+<script src="signup.js"></script>
+</html>

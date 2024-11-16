@@ -1,0 +1,294 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    background-image: url(signup-backg.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+/* navbar */
+
+.logo{
+    cursor: pointer;
+    width: 120px;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: transparent;
+    padding: 30px 50px;
+    font-size: 16px;
+}
+nav a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+}
+.menu a{
+    display: inline-block;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.menu a::after{
+    color: white;
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    background: rgb(101, 101, 245);
+    transform-origin: bottom right;
+
+}
+
+.menu a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.btn{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.register {
+    text-decoration: none;
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    margin-top: 18px;
+
+}
+.border:hover .dropdown-menu{
+    display: block;
+}
+
+.border:hover{
+    background-color: rgb(197, 197, 197);
+    border-radius: 50px;
+    border: 2px solid rgb(197, 197, 197) ;
+}
+
+.border:hover .register{
+    color:black;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+.nav-link .drop-down { 
+    list-style: none;
+}
+.text-dropdown a{
+    text-decoration: none;
+    color: black;
+}
+.text-dropdown{
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.border{
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: transparent;
+    padding: 12px;
+    display: flex;
+}
+.register{
+    color: black;
+}
+.icon-arrow{
+    width: 15px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.icon-arrow:hover{
+    cursor: pointer;
+}
+
+
+/* navbar-end */
+
+/* form */
+
+.body1{
+    font-size: 0.8rem;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container1{
+    max-width: 550px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    background: rgba(0, 0, 0, 0.5);
+}
+.container1 .signup-title{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+.container1 .form{
+    margin-top: 10px;
+}
+.form .input1{
+    width: 100%;
+    margin-top: 20px;
+}
+.input1 label{
+    color: white;
+}
+.form .input1 input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 0.8rem;
+    color: #707070;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0 13px;
+}
+
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+.form .gender1{
+    margin-top: 20px;
+}
+.gender1 h3{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where(.gender-div, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+.form .gender{
+    column-gap: 5px;
+    cursor: pointer;
+    color: white;
+}
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+}
+.input-tnc{
+    margin-top: 13px;
+    color: white;
+}
+
+.form button{
+    margin-top: 20px;
+    height: 45px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    font-family: sans-serif;
+    border: none;
+
+}
+#error{
+    color: white;
+}
+@media (max-width: 768px) {
+    nav{
+        padding: 20px 30px;
+        width: 100%;
+    }
+    nav .btn{
+        display: block;
+        color: black;
+        font-size: 24px;
+    }
+    nav .menu{
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        background: rgb(54, 54, 54);
+        min-width: 80%;
+        padding: 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+    nav .menu.active{
+        right: 0;
+    }
+    nav .menu .close-btn{
+        position: absolute;
+        margin: 25px;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+    nav .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        color: white;
+        padding: 0 15px;
+    }
+    .border{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    .form .column{
+        flex-wrap: wrap;
+    }
+}
+
+
+

@@ -1,0 +1,417 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    max-width: 90%;
+    margin: auto;
+}
+.scontainer{
+    max-width: 80%;
+    margin: auto;
+}
+
+.flex1{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* navbar */
+/* navbar */
+.logo{
+    cursor: pointer;
+    width: 120px;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: white;
+    padding: 30px 50px;
+    font-size: 16px;
+}
+nav a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+}
+.menu a{
+    display: inline-block;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.menu a::after{
+    color: white;
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    background: rgb(101, 101, 245);
+    transform-origin: bottom right;
+
+}
+
+.menu a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.btn{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.register {
+    text-decoration: none;
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    margin-top: 18px;
+
+}
+.border:hover .dropdown-menu{
+    display: block;
+}
+
+.border:hover{
+    background-color: rgb(197, 197, 197);
+    border-radius: 50px;
+    border: 2px solid rgb(197, 197, 197) ;
+}
+
+.border:hover .register{
+    color:black;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+.nav-link .drop-down { 
+    list-style: none;
+}
+.text-dropdown a{
+    text-decoration: none;
+    color: black;
+}
+.text-dropdown{
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.border{
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: white;
+    padding: 12px;
+    display: flex;
+}
+.register{
+    color: black;
+}
+.icon-arrow{
+    width: 15px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.icon-arrow:hover{
+    cursor: pointer;
+}
+
+/* navbar-end */
+/* 
+all cars */
+
+.find-your{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.products{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product{
+    width: 330px;
+    margin: 10px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+}
+.fotoproduct{
+    width: 276px;
+    height: 200px;
+}
+.foto-product{
+    width: 300px;
+    height: 200px;
+}
+.center-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hargamulai{
+    margin: 0;
+    color: rgb(80, 84, 87);
+}
+.harga{
+    margin-top: 5px;
+}
+.selengkapnya{
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: darkblue;
+    border: none;
+    color: white;
+}
+.deskripsi-product{
+    margin-top: 20px;
+}
+.button-selengkapnya{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+    
+}
+.hargaproduct{
+    color: rgb(13, 13, 124);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.hargamulai{
+    font-weight: normal;
+}
+.harga{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.newcar:hover{
+        border: 1px solid darkblue;
+        cursor: pointer;
+}
+
+/* newcars */
+.new{
+    font-weight: normal;
+    margin-bottom: 10px;
+
+}
+.new-title{
+    color: red;
+    text-align: right;
+    font-size: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+.newcars{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.newcar{
+    width: 330px;
+    margin: 10px;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+}
+.fotoproduct{
+    width: 276px;
+    height: 200px;
+}
+.center-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hargamulai{
+    margin: 0;
+    color: rgb(80, 84, 87);
+}
+.harga{
+    margin-top: 5px;
+}
+.selengkapnya{
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: darkblue;
+    border: none;
+    color: white;
+}
+.deskripsi-newcars{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.button-selengkapnya2{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+    margin-right: 30px;
+    
+}
+.hargaproduct{
+    color: rgb(13, 13, 124);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.hargamulai{
+    font-weight: normal;
+}
+.harga{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.product:hover{
+        border: 1px solid darkblue;
+        cursor: pointer;
+}
+
+/* footer */
+
+.footer{
+    margin-top: 30px;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    background-color: #f9f9f9;
+}
+
+.box-container{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{ 
+    display: block;
+    color: #666;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color: #333;
+}
+
+.footer .box-container .box img{
+    margin-top: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 1rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span{
+    color: #9A9A9A;
+}
+a{
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    nav{
+        padding: 20px 30px;
+        width: 100%;
+    }
+    nav .btn{
+        display: block;
+        color: black;
+        font-size: 24px;
+    }
+    nav .menu{
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        background: rgb(54, 54, 54);
+        min-width: 80%;
+        padding: 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+    nav .menu.active{
+        right: 0;
+    }
+    nav .menu .close-btn{
+        position: absolute;
+        margin: 25px;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+    nav .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        color: white;
+        padding: 0 15px;
+    }
+    .border{
+        display: none;
+    }
+}

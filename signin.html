@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <img class="logo" src="logonya2.png" alt="logo"> 
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+    
+            </div>
+            <a href="home.html">Home</a>
+            <a href="promotion.html">Promotion</a>
+            <a href="allcars.html">All Cars</a>
+            <a href="aboutus.html">About Us</a>
+        </div>
+
+        <div class="border">
+            <div class="navbar dropdown"><a class="register" href="">Register</a>
+                <div class="dropdown-menu">
+                    <div class="text-dropdown"><a href="signin.html">Sign In</a></div>
+                    <div class="text-dropdown"><a href="signup.html">Sign Up</a></div>
+                </div>
+            </div>
+            <div class="icon">
+                <img class="icon-arrow" src="Assets/ui/down_down_arrow.png" alt="">
+            </div>
+        </div>
+
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </nav>
+    <script src="nav.js"></script>
+    <div class="body1">
+        <section class="container1">
+            <header class="signin-title">Sign In</header>
+            <div id="error"></div>
+            <form action="" class="form" name="regis" onsubmit="return validate()">
+                <div class="input1">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                </div>
+                <div class="input1">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter Password">
+                </div>
+                <button onclick="myBtn()" type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+</body>
+<script src="signin.js"></script>
+</html>

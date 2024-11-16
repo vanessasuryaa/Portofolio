@@ -1,0 +1,591 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* navbar */
+.logo{
+    cursor: pointer;
+    width: 120px;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: white;
+    padding: 30px 50px;
+    font-size: 16px;
+}
+nav a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+}
+.menu a{
+    display: inline-block;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+.menu a::after{
+    color: white;
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.1em;
+    bottom: 0;
+    left: 0;
+    background: rgb(101, 101, 245);
+    transform-origin: bottom right;
+}
+
+.menu a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.btn{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.register {
+    text-decoration: none;
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    margin-top: 18px;
+
+}
+.border:hover .dropdown-menu{
+    display: block;
+}
+
+.border:hover{
+    background-color: rgb(197, 197, 197);
+    border-radius: 50px;
+    border: 2px solid rgb(197, 197, 197) ;
+}
+
+.border:hover .register{
+    color:black;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+}
+.nav-link .drop-down { 
+    list-style: none;
+}
+.text-dropdown a{
+    text-decoration: none;
+    color: black;
+}
+.text-dropdown{
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.border{
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: white;
+    padding: 12px;
+    display: flex;
+}
+.register{
+    color: black;
+}
+.icon-arrow{
+    width: 15px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.icon-arrow:hover{
+    cursor: pointer;
+}
+
+/* navbar-end */
+
+/* promotion */
+.promotion{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px 0;
+    padding-right: 80px;
+}
+.promotion-content{
+    max-width: 50%;
+
+}
+.promotion-content h1{
+    font-size: 50px;
+
+}
+.promotion-content h3{
+    font-size: 40px;
+    color: darkblue;
+}
+.promotion-content p{
+    font-size: 16px;
+    margin: 15px 0 30px;
+    text-align: justify;
+}
+.btn-promo{
+    display: inline-block;
+    padding: 10px 28px;
+    background: rgb(96, 96, 96);
+    border: rgb(96, 96, 96);
+    border-radius: 6px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+.btn-promo:hover{
+    cursor: pointer;
+}
+.right-car{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.img2{
+    width: 100%;
+    flex-shrink: 0;
+}
+.my-car{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.gallery2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+    margin-left: 3%;
+}
+button.prev2, button.next2 {
+    position: absolute;
+    top: 90%;
+    background-color: rgba(36, 36, 36, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50px;
+}
+
+.prev2{
+    left: 2px;
+    padding: 2px 5px;
+}
+.next2{
+    right: 10px;
+    padding: 2px 5px;
+}
+
+/* img slider */
+.carousel-container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+.img{
+    width: 100%;
+    flex-shrink: 0;
+}
+.carousel-slider{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+button.prev, button.next {
+    position: absolute;
+    top: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev{
+    left: 10px;
+    padding: 2px 5px;
+}
+.next{
+    right: 10px;
+    padding: 2px 5px;
+}
+
+/* featured cars */
+.center{
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cars{
+    margin-top: 50px;
+}
+.mcars{
+    margin-top: 50px;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h1{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.buy{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.featured cars{
+    background-color: aliceblue;
+}
+.box{
+    background-color: #f9f9f9;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    transition: 0.5s;
+    width: 400px;
+}
+.image-mobil{
+    height: 250px;
+    width: 350px;
+}
+.box:hover{
+    border: 1px solid darkblue;
+    cursor: pointer;
+}
+.latest .img-car{
+    position: relative;
+}
+.img-car i {
+    color: rgb(13, 13, 124);
+    font-size: 20px;
+    line-height: 50px;
+   
+}
+   
+.details p{
+    margin-top: 20px;
+    text-align: justify;
+}
+.details h2{
+    font-weight: 400;
+    color: rgb(13, 13, 124);
+    margin: 20px 0 20px 0;
+}
+.details button{
+    margin: 0;
+    margin-top: 20px;
+}
+.button-buy{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+} 
+
+/* short desc home page */
+.short-desc{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.about-home{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.card1{
+    text-align: center;
+    max-width: 80%;
+    margin-left: 120px;
+
+}
+.card2{
+    text-align: center;
+    max-width: 80%;
+    margin-left: 40px;
+}
+.image-home{
+    height: 200px;
+    width: 60%;
+}
+.detail h3{
+    color: rgb(13, 13, 124);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.detail p{
+    text-align: justify;
+}
+
+.card2 .detail p{
+    text-align: justify;
+    padding: 20px;
+}
+
+/* footer */
+.footer{
+    margin-top: 30px;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    background-color: #f9f9f9;
+}
+
+.footer-container{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+a{
+    text-decoration: none;
+}
+.footer .footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6.2rem;   
+}
+.footer .footer-container .part{
+    flex: 1 1 25rem;
+}
+
+.footer .footer-container .part h3{
+    color: #333;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .footer-container .part a{ 
+    display: block;
+    color: #666;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.footer .footer-container .part a:hover{
+    color: #333;
+}
+
+.footer .footer-container .part img{
+    margin-top: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 1rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span{
+    color:#9A9A9A;
+}
+
+
+/* responsive styles */
+@media (max-width: 1040px) {
+    nav{
+        padding: 30px 20px;
+    }
+    .menu{
+        gap: 28px;
+    }
+    .heading button {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .promotion {
+        flex-direction: column;
+        height: auto;
+        padding: 120px 5%;
+        padding-bottom: 0;
+    }
+    .promotion-content h1 {
+        font-size: 32px;
+    }
+    .promotion-content h3 {
+        font-size: 28px;
+    }
+    
+    .carousel-container {
+        height: auto;
+    }
+
+    .carousel-slider,
+    .carousel-slider .img {
+        width: 100%;
+        height: auto;
+    }
+    .short-desc {
+        font-size: 28px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .about-home {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .card1, .card2 {
+        max-width: 60%;
+        margin: 0 auto 30px;
+    }
+
+    .image-home {
+        width: 100%;
+        height: auto;
+    }
+
+    .detail h3 {
+        font-size: 24px;
+    }
+
+    .detail p {
+        font-size: 14px;
+    }
+
+    .card2 .detail p {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav{
+        padding: 20px 30px;
+        width: 100%;
+    }
+    nav .btn{
+        display: block;
+        color: black;
+        font-size: 24px;
+    }
+    nav .menu{
+        position: fixed;
+        flex-direction: column;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        background: rgb(54, 54, 54);
+        min-width: 80%;
+        padding: 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+    nav .menu.active{
+        right: 0;
+    }
+    nav .menu .close-btn{
+        position: absolute;
+        margin: 25px;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+    nav .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        color: white;
+        padding: 0 15px;
+    }
+    .border{
+        display: none;
+    }
+    .gallery2{
+        margin-top: 20px;
+    }
+
+    button.prev2, button.next2 {
+        top: 85%;
+        padding: 8px;
+    }
+
+    button.prev,
+    button.next {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    button.prev2, button.next2 {
+        top: 80%;
+        padding: 6px;
+    }
+
+    .prev2 {
+        left: 5px;
+    }
+
+    .next2 {
+        right: 5px;
+    }
+
+    button.prev,
+    button.next {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
